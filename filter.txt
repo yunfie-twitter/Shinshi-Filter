@@ -1,0 +1,51 @@
+! 紳士フォルター
+##+js(set, fuckAdBlock, undefined)
+##+js(set, BlockAdBlock, undefined)
+##+js(set, adblock, false)
+##+js(set, canRunAds, true)
+##+js(nano-stb, detectAdBlock)
+##+js(nano-stb, adblockDetector)
+##+js(nano-stb, adBlockDetected)
+##+js(aopr, open)
+##+js(aopr, alert)
+##+js(noeval-if, /adblock|fuckadblock|blockadblock/i)
+##.adblock-overlay
+##.adblock-modal
+##.adblock-wall
+##.paywall-overlay
+##.popup-adblock
+##.anti-adblock
+##.adb-enabled
+##body[class*="adblock"]
+##html[class*="adblock"]
+##+js(rc, adblock)
+##+js(rc, antiadblock)
+##+js(rc, popup)
+##+js(ra, style, body)
+##+js(ra, class, body)
+##body:style(overflow:auto!important;)
+##html:style(overflow:auto!important;)
+||pagead2.googlesyndication.com^$script,redirect=noopjs
+||fundingchoicesmessages.google.com^$script,redirect=noopjs
+||cdn.adsafeprotected.com^$script,redirect=noopjs
+*$script,denyallow=google.com|youtube.com,match-case,removeparam=adblock
+##+js(aopr, MutationObserver)
+##+js(aeld, DOMNodeInserted)
+##+js(aeld, visibilitychange)
+##+js(nostif)
+##+js(window-close-if)
+##+js(set, adsBlocked, false)
+##+js(set, adBlockEnabled, false)
+##+js(set, showAds, true)
+niji-gazo.com#@#.ad-block
+niji-gazo.com#@#.banner-ad
+||niji-gazo.com/ads/
+niji-gazo.com##.bounceInUp.gallery-ad-block-b-on.animated.gallery-ad-block
+niji-gazo.com##.bounceInUp.gallery-ad-block-a-on.animated.gallery-ad-block
+niji-gazo.com##.partner-block
+niji-gazo.com##div[id*="-ad-block-"]
+niji-gazo.com###dmm-recommend
+niji-gazo.com##iframe[src^="/ads/"]
+niji-gazo.com##[id^="gallery-ad-block-"]
+niji-gazo.com###np-overlay
+||niji-gazo.com/api/dmm/affiliate/
