@@ -49,3 +49,24 @@ niji-gazo.com##iframe[src^="/ads/"]
 niji-gazo.com##[id^="gallery-ad-block-"]
 niji-gazo.com###np-overlay
 ||niji-gazo.com/api/dmm/affiliate/
+! ---- Anti Anti-Adblock ----
+
+niji-gazo.com##+js(set, canRunAds, true)
+niji-gazo.com##+js(set, adBlockDetected, false)
+niji-gazo.com##+js(set, adblock, false)
+
+niji-gazo.com##+js(set, fuckAdBlock, undefined)
+niji-gazo.com##+js(set, BlockAdBlock, undefined)
+
+niji-gazo.com##+js(noeval-if, /adblock|fuckadblock|blockadblock/i)
+
+! ---- Popup / Overlay kill ----
+
+niji-gazo.com##.adblock-overlay
+niji-gazo.com##.anti-adblock
+niji-gazo.com##.paywall
+niji-gazo.com##.popup-adblock
+
+niji-gazo.com##[class*="adblock"]
+niji-gazo.com##[id*="adblock"]
+
