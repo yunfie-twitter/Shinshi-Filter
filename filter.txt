@@ -1,4 +1,38 @@
 ! 紳士フォルター
+! 一般的な広告要素
+##.ad
+##.ads
+##.advertisement
+##.banner-ad
+##.google-ad
+##.sponsor
+##.promoted
+
+! iframe広告
+##iframe[src*="ads"]
+##iframe[src*="doubleclick"]
+##iframe[src*="googlesyndication"]
+
+! ポップアップ系
+##.popup-ad
+##.overlay-ad
+##.floating-ad
+##.sticky-ad
+
+! 動画前広告
+##.video-ads
+##.ytp-ad-module
+##.ytp-ad-player-overlay
+
+! スクロール追従広告
+##.sticky-banner
+##.fixed-ad
+##[style*="position:fixed"][class*="ad"]
+
+! 誤タップ誘導系
+##a[href*="redirect"]
+##a[target="_blank"][rel="sponsored"]
+
 ##+js(set, fuckAdBlock, undefined)
 ##+js(set, BlockAdBlock, undefined)
 ##+js(set, adblock, false)
